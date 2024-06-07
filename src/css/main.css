@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 10vw;
+}
+.container .view {
+  width: 33vw;
+  height: 100%;
+  background-image: url(../img/view-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container .view .card {
+  width: 447px;
+  height: 245px;
+  -webkit-box-shadow: 0px 39px 60px 0px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 39px 60px 0px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  border-radius: 10px;
+}
+.container .view .view-cradfront {
+  background-image: url(../img/cardfrod-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 187px;
+  right: -128px;
+  padding: 28px 32px;
+  z-index: 1;
+}
+.container .view .view-cradfront .card-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.container .view .view-cradfront .card-logo .circle-1 {
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+  background-color: rgb(255, 255, 255);
+}
+.container .view .view-cradfront .card-logo .circle-2 {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(255, 255, 255);
+}
+.container .view .view-cradfront .card-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 35.73px;
+  letter-spacing: 3.42px;
+  margin-bottom: 26px;
+}
+.container .view .view-cradfront .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 17.86px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.container .view .view-cardback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  bottom: 187px;
+  right: -222px;
+  background: linear-gradient(168.73deg, #ffffff 5%, #d2d3d9 91.69%);
+  padding-top: 23px;
+}
+.container .view .view-cardback .card-hide {
+  width: 100%;
+  height: 54px;
+  background-color: rgb(47, 47, 47);
+  margin-bottom: 24px;
+}
+.container .view .view-cardback .cardback-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 17.86px;
+  letter-spacing: 2px;
+  width: 361px;
+  height: 38px;
+  text-align: end;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: rgb(173, 181, 190);
+  margin-bottom: 33px;
+}
+.container .view .view-cardback .cardback-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+}
+.container .view .view-cardback .cardback-info .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+.container .view .view-cardback .cardback-info .column .item {
+  border-radius: 4px;
+  height: 4px;
+  background-color: rgb(173, 181, 190);
+}
+.container .view .view-cardback .cardback-info .column .i1 {
+  width: 115px;
+}
+.container .view .view-cardback .cardback-info .column .i2 {
+  width: 22px;
+}
+.container .view .view-cardback .cardback-info .column .i3 {
+  width: 9px;
+}
+.container .view .view-cardback .cardback-info .column .i4 {
+  width: 60px;
+}
+.container .view .view-cardback .cardback-info .column .i5 {
+  width: 46px;
+}
+.container .main {
+  width: 57vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+.container .main form {
+  max-width: 429px;
+  padding: 45px 24px;
+}
+.container .main form label {
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(33, 9, 47);
+  line-height: 15.31px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+.container .main form input {
+  height: 45px;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(33, 9, 47);
+  line-height: 22.97px;
+  letter-spacing: 0;
+  padding: 11px 16px;
+  border: 1px solid rgb(223, 222, 224);
+  border-radius: 8px;
+  outline: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.container .main form input::-webkit-input-placeholder {
+  color: rgba(33, 9, 47, 0.4);
+}
+.container .main form input::-moz-placeholder {
+  color: rgba(33, 9, 47, 0.4);
+}
+.container .main form input:-ms-input-placeholder {
+  color: rgba(33, 9, 47, 0.4);
+}
+.container .main form input::-ms-input-placeholder {
+  color: rgba(33, 9, 47, 0.4);
+}
+.container .main form input::placeholder {
+  color: rgba(33, 9, 47, 0.4);
+}
+.container .main form input:focus {
+  border-color: rgb(97, 5, 149);
+}
+.container .main form button {
+  width: 100%;
+  height: 53px;
+  border-radius: 8px;
+  background-color: rgb(33, 9, 47);
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 22.97px;
+  letter-spacing: 0;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+@media (hover: hover) {
+  .container .main form button:hover {
+    background-color: rgba(33, 9, 47, 0.8);
+  }
+  .container .main form button:active {
+    -webkit-transform: scale(0.99);
+        -ms-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+}
+@media (hover: none) {
+  .container .main form button:active {
+    background-color: rgba(33, 9, 47, 0.8);
+    -webkit-transform: scale(0.99);
+        -ms-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+}
+.container .main form .take-info {
+  margin-bottom: 40px;
+}
+.container .main form .take-info .card-on {
+  margin-bottom: 26px;
+}
+.container .main form .take-info .card-on input {
+  width: 100%;
+}
+.container .main form .take-info .two-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 20px;
+}
+.container .main form .take-info .two-row .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 0;
+}
+.container .main form .take-info .two-row .data .data-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 10px;
+}
+.container .main form .take-info .two-row .data .data-input input {
+  max-width: 80px;
+}
+.container .main form .take-info .two-row .cvc input {
+  max-width: 191px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 46px;
+  }
+  .container .view {
+    width: 100vw;
+  }
+  .container .view .view-cradfront {
+    left: 52px;
+    top: 126px;
+  }
+  .container .view .view-cardback {
+    right: 52px;
+    top: 51px;
+  }
+  .container .main {
+    width: 100vw;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    height: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 46px;
+  }
+  .container .view {
+    height: 240px;
+  }
+  .container .view .card {
+    width: 286px;
+    height: 157px;
+    border-radius: 6px;
+  }
+  .container .view .view-cradfront {
+    left: 16px;
+    padding: 19px;
+  }
+  .container .view .view-cradfront .card-logo {
+    gap: 10px;
+    margin-bottom: 37px;
+  }
+  .container .view .view-cradfront .card-logo .circle-1 {
+    width: 30px;
+    height: 30px;
+  }
+  .container .view .view-cradfront .card-logo .circle-2 {
+    width: 13px;
+    height: 13px;
+  }
+  .container .view .view-cradfront .card-number {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 22.97px;
+    letter-spacing: 2.2px;
+    margin-bottom: 17px;
+  }
+  .container .view .view-cradfront .card-info {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 11.48px;
+    letter-spacing: 1.29px;
+  }
+  .container .view .view-cardback {
+    top: 32px;
+    right: 16px;
+    padding-top: 14.74px;
+  }
+  .container .view .view-cardback .card-hide {
+    height: 34.6px;
+    margin-bottom: 15.38px;
+  }
+  .container .view .view-cardback .cardback-number {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 11.48px;
+    letter-spacing: 1.29px;
+    width: 231px;
+    height: 29.74px;
+    padding: 8.91px 10.79px;
+    margin-bottom: 20px;
+  }
+  .container .view .view-cardback .cardback-info {
+    gap: 4px;
+  }
+  .container .view .view-cardback .cardback-info .column {
+    gap: 3px;
+  }
+  .container .view .view-cardback .cardback-info .column .item {
+    border-radius: 2px;
+    height: 2px;
+  }
+  .container .main form {
+    max-width: 375px;
+  }
+  .container .main form .take-info {
+    margin-bottom: 28px;
+  }
+  .container .main form .take-info .two-row {
+    gap: 11px;
+  }
+  .container .main form .take-info .two-row .data .data-input {
+    gap: 8px;
+  }
+  .container .main form .take-info .two-row .data .data-input input {
+    max-width: 72px;
+  }
+  .container .main form .take-info .two-row .cvc input {
+    max-width: 164px;
+  }
+}

@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import "./reset";
+@mixin font($size, $weight, $color, $lineH, $letterS) {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $lineH;
+  letter-spacing: $letterS;
+}
+@mixin flex($fd, $jc, $ai, $gap) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+.container {
+  height: 100vh;
+  @include flex(row, stretch, stretch, 10vw);
+  .view {
+    width: 33vw;
+    height: 100%;
+    background-image: url(../img/view-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .card {
+      width: 447px;
+      height: 245px;
+      box-shadow: 0px 39px 60px 0px rgba(0, 0, 0, 0.14);
+      position: absolute;
+      border-radius: 10px;
+    }
+    .view-cradfront {
+      background-image: url(../img/cardfrod-background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 187px;
+      right: -128px;
+      padding: 28px 32px;
+      z-index: 1;
+      .card-logo {
+        @include flex(row, stretch, center, 16px);
+        margin-bottom: 64px;
+        .circle-1 {
+          border-radius: 50%;
+          width: 47px;
+          height: 47px;
+          background-color: rgba(255, 255, 255, 1);
+        }
+        .circle-2 {
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          border: 1px solid rgba(255, 255, 255, 1);
+        }
+      }
+      .card-number {
+        @include font(28px, 500, #fff, 35.73px, 3.42px);
+        margin-bottom: 26px;
+      }
+      .card-info {
+        @include flex(row, space-between, center, 0);
+        @include font(14px, 500, #fff, 17.86px, 2px);
+        text-transform: uppercase;
+      }
+    }
+    .view-cardback {
+      @include flex(column, stretch, center, 0);
+      bottom: 187px;
+      right: -222px;
+      background: linear-gradient(168.73deg, #ffffff 5%, #d2d3d9 91.69%);
+      padding-top: 23px;
+      .card-hide {
+        width: 100%;
+        height: 54px;
+        background-color: rgba(47, 47, 47, 1);
+        margin-bottom: 24px;
+      }
+      .cardback-number {
+        @include font(14px, 500, #fff, 17.86px, 2px);
+        width: 361px;
+        height: 38px;
+        text-align: end;
+        padding: 10px 16px;
+        border-radius: 4px;
+        background-color: rgba(173, 181, 190, 1);
+        margin-bottom: 33px;
+      }
+      .cardback-info {
+        @include flex(column, stretch, center, 7px);
+        .column {
+          @include flex(row, center, center, 6px);
+          .item {
+            border-radius: 4px;
+            height: 4px;
+            background-color: rgba(173, 181, 190, 1);
+          }
+          .i1 {
+            width: 115px;
+          }
+          .i2 {
+            width: 22px;
+          }
+          .i3 {
+            width: 9px;
+          }
+          .i4 {
+            width: 60px;
+          }
+          .i5 {
+            width: 46px;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    width: 57vw;
+    @include flex(row, center, center, 0);
+    form {
+      max-width: 429px;
+      padding: 45px 24px;
+      label {
+        cursor: pointer;
+        @include font(12px, 500, rgba(33, 9, 47, 1), 15.31px, 2px);
+        display: block;
+        margin-bottom: 9px;
+        text-transform: uppercase;
+      }
+      input {
+        height: 45px;
+        cursor: pointer;
+        @include font(18px, 500, rgba(33, 9, 47, 1), 22.97px, 0);
+        padding: 11px 16px;
+        border: 1px solid rgba(223, 222, 224, 1);
+        border-radius: 8px;
+        outline: none;
+        transition-duration: 0.2s;
+        &::placeholder {
+          color: rgba(33, 9, 47, 0.4);
+        }
+        &:focus {
+          border-color: rgba(97, 5, 149, 1);
+        }
+      }
+      button {
+        width: 100%;
+        height: 53px;
+        border-radius: 8px;
+        background-color: rgba(33, 9, 47, 1);
+        border: none;
+        @include font(18px, 500, rgba(255, 255, 255, 1), 22.97px, 0);
+        transition-duration: 0.2s;
+        @media (hover: hover) {
+          &:hover {
+            background-color: rgba(33, 9, 47, 0.8);
+          }
+          &:active {
+            transform: scale(0.99);
+          }
+        }
+        @media (hover: none) {
+          &:active {
+            background-color: rgba(33, 9, 47, 0.8);
+            transform: scale(0.99);
+          }
+        }
+      }
+      .take-info {
+        margin-bottom: 40px;
+        .card-on {
+          margin-bottom: 26px;
+          input {
+            width: 100%;
+          }
+        }
+        .two-row {
+          @include flex(row, stretch, stretch, 20px);
+          .data {
+            @include flex(column, stretch, stretch, 0);
+            .data-input {
+              @include flex(row, stretch, stretch, 10px);
+              input {
+                max-width: 80px;
+              }
+            }
+          }
+          .cvc {
+            input {
+              max-width: 191px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    @include flex(column, center, stretch, 46px);
+    .view {
+      width: 100vw;
+
+      .view-cradfront {
+        left: 52px;
+        top: 126px;
+      }
+      .view-cardback {
+        right: 52px;
+        top: 51px;
+      }
+    }
+    .main {
+      width: 100vw;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    height: 100;
+    @include flex(column, stretch, stretch, 46px);
+    .view {
+      height: 240px;
+      .card {
+        width: 286px;
+        height: 157px;
+        border-radius: 6px;
+      }
+      .view-cradfront {
+        left: 16px;
+        padding: 19px;
+        .card-logo {
+          gap: 10px;
+          margin-bottom: 37px;
+          .circle-1 {
+            width: 30px;
+            height: 30px;
+          }
+          .circle-2 {
+            width: 13px;
+            height: 13px;
+          }
+        }
+        .card-number {
+          @include font(18px, 500, #fff, 22.97px, 2.2px);
+          margin-bottom: 17px;
+        }
+        .card-info {
+          @include font(9px, 500, #fff, 11.48px, 1.29px);
+        }
+      }
+      .view-cardback {
+        top: 32px;
+        right: 16px;
+        padding-top: 14.74px;
+        .card-hide {
+          height: 34.6px;
+          margin-bottom: 15.38px;
+        }
+        .cardback-number {
+          @include font(9px, 500, #fff, 11.48px, 1.29px);
+          width: 231px;
+          height: 29.74px;
+          padding: 8.91px 10.79px;
+          margin-bottom: 20px;
+        }
+        .cardback-info {
+          gap: 4px;
+          .column {
+            gap: 3px;
+            .item {
+              border-radius: 2px;
+              height: 2px;
+            }
+          }
+        }
+      }
+    }
+    .main {
+      form {
+        max-width: 375px;
+        .take-info {
+          margin-bottom: 28px;
+          .two-row {
+            gap: 11px;
+            .data {
+              .data-input {
+                gap: 8px;
+                input {
+                  max-width: 72px;
+                }
+              }
+            }
+            .cvc {
+              input {
+                max-width: 164px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

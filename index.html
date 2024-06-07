@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Card-bank</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="view">
+        <div class="card view-cradfront">
+          <div class="card-logo">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+          </div>
+          <p class="card-number">0000 0000 0000 0000</p>
+          <p class="card-info">
+            <span class="card-owener">boboqulov bobur</span>
+            <span class="card-data">00/00</span>
+          </p>
+        </div>
+        <div class="card view-cardback">
+          <div class="card-hide"></div>
+          <p class="cardback-number">000</p>
+          <div class="cardback-info">
+            <div class="column">
+              <span class="item i1"></span>
+              <span class="item i2"></span>
+              <span class="item i2"></span>
+              <span class="item i3"></span>
+            </div>
+            <div class="column">
+              <span class="item i2"></span>
+              <span class="item i4"></span>
+              <span class="item i5"></span>
+              <span class="item i3"></span>
+            </div>
+            <div class="column">
+              <span class="item i3"></span>
+              <span class="item i2"></span>
+              <span class="item i2"></span>
+              <span class="item i1"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <form>
+          <div class="take-info">
+            <div class="card-on">
+              <label for="name">Cardholder Name</label>
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="e.g. Boboqulov Bobur"
+                autocomplete="on"
+              />
+            </div>
+            <div class="card-on">
+              <label for="crad-number">Card Number</label>
+              <input
+                name="crad-number"
+                id="crad-number"
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+                maxlength="19"
+                autocomplete="on"
+              />
+            </div>
+            <div class="two-row">
+              <div class="data">
+                <label for="">Exp. Date (MM/YY)</label>
+                <div class="data-input">
+                  <input
+                  name="data-month"
+                  type="text"
+                  placeholder="MM"
+                  maxlength="2"
+                  autocomplete="on"
+                />
+                <input
+                  name="data-year"
+                  type="text"
+                  placeholder="YY"
+                  maxlength="2"
+                  autocomplete="on"
+                />
+                </div>
+              </div>
+              <div class="cvc">
+                <label for="cvc">CVC</label>
+                <input
+                  name="cvc"
+                  id="cvc"
+                  type="text"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                  autocomplete="on"
+                />
+              </div>
+            </div>
+          </div>
+          <button>Confirm</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
